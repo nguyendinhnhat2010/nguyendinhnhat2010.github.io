@@ -1,0 +1,57 @@
+.contact-form h1{
+    padding-top: 20px;
+    margin-left: 20%;
+    font-size: 28px;
+    font-family: 'Roboto Condensed',sans-serif,Arial,sans-serif;
+}
+.contact-form p{
+    margin-left: 20%;
+    padding-top: 10px;
+    font-family: 'Roboto Condensed',sans-serif,Arial,sans-serif;
+    font-size: 18px;
+}
+.contact-form label{
+    display: block;
+    margin-left: 20%;
+    padding-top: 10px;
+    font-family: 'Roboto Condensed',sans-serif,Arial,sans-serif;
+    font-size: 18px;
+}
+.contact-form input{
+    display: block;
+    margin-left: 20%;
+    margin-bottom: 5px;
+}
+.contact-form textarea{
+    display: block;
+    margin-left: 20%;
+    margin-bottom: 5px;
+}
+.contact-form button{
+    display: block;
+    margin-left: 20%;
+    border: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #f7c08a;
+}
+.box {
+    float: left;
+    width: 28.05%;
+    padding: 50px;
+    text-align: center;
+}
+.btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #FE2E2E;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    color: rgba(255, 255, 255, 0.4);
+}

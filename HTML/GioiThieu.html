@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Trang Chủ</title>
+        <link rel="stylesheet" href="../CSS/Style.css">
+        <link rel="stylesheet" href="../CSS/GioiThieu.css">
+        <link rel="stylesheet" href="../fontawesome-free-5.15.3-web/css/all.css">
+    </head>
+    <body>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                var $filter = $('.head_nav');
+                var $filterSpacer = $('<div />', {
+                    "height": $filter.outerHeight()
+                });
+                if ($filter.size())
+                {
+                    $(window).scroll(function ()
+                    {
+                        if (!$filter.hasClass('fix') && $(window).scrollTop() > $filter.offset().top)
+                        {
+                            $filter.before($filterSpacer);
+                            $filter.addClass("fix");
+                        }
+                        else if ($filter.hasClass('fix')  && $(window).scrollTop() < $filterSpacer.offset().top)
+                        {
+                            $filter.removeClass("fix");
+                            $filterSpacer.remove();
+                        }
+                    });
+                }
+       
+            });
+          </script>
+        <header class="header fix">
+            <nav id="navbar">
+                <div id="navbar-up">
+                    <ul>
+                        <li><img src="../image/Hotline.png"> Hotline: 0939589374</li>
+                        <li><a href="https://www.facebook.com/dinhnhat2010"><img src="../image/Facebook.png" alt=""></a></li>
+                        <li class="tenshop">FaShion Phương Nhật</li>
+                        <li><a class="contact" href="../HTML/LienHe.html"><i class="far fa-id-card"></i> Liên Hệ</a></li>
+                        <li><a class="cart" href="../HTML/GioHang.html"><i class="fas fa-cart-plus"></i> Giỏ Hàng</a></li>
+                    </ul>
+                </div>
+                <div id="navbar-menu">
+                    <ul class="menu">
+                        <li><a href="../HTML/TrangChu.html">Trang Chủ</a></li>
+                        <li><a href="">Áo</a>
+                            <ul class="submenu">
+                                <li><a href="../HTML/AoPhong.html">Áo Phông</a></li>
+                                <li><a href="../HTML/AoSoMi.html">Áo Sơ Mi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../HTML/TrangChu.html"><img src="../image/logo1.png" alt=""></a></li>
+                        <li><a href="">Quần</a>
+                            <ul class="submenu">
+                                <li><a href="../HTML/QuanShorts.html">Quần Shorts</a></li>
+                                <li><a href="../HTML/QuanJeans.html">Quần Jeans</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="current" href="../HTML/GioiThieu.html">Giới Thiệu</a></li>
+                    </ul>
+                </div>
+                <div id="navbar-search">
+                    <input type="text" placeholder="Tìm kiếm trong cửa hàng">
+                    <button><img src="../image/Search.png"></button>
+                </div>
+            </nav> 
+        </header>
+        <section style="margin-top: 200px;">
+            <div>
+                <p id="tittle">
+                    FaShion Phương Nhật / Giới Thiệu
+                </p>
+            </div>  
+        </section>
+        <section>
+            <div class="content-intro">
+                <div class="introduce">
+                    <h2>Giới Thiệu Shop Phương Nhật</h2>
+                    <p class="py-1">Thương hiệu thời trang nam Phương Nhật được thành lập từ tháng 3 năm 2020, là thương hiệu thời trang uy tín hàng đầu tại Việt Nam dành riêng cho phái mạnh.</p>
+                    <p class="black-bold">Sứ Mệnh</p>
+                    <p class="py-1">Không ngừng sáng tạo và tỉ mỉ từ công đoạn sản xuất đến các khâu dịch vụ, nhằm mang đến cho Quý Khách Hàng những trải nghiệm mua sắm đặc biệt nhất: sản phẩm <br>
+                        chất lượng - dịch vụ hoàn hảo - xu hướng thời trang mới mẻ và tinh tế. Thông qua các sản phẩm thời trang, Phương Nhật luôn mong muốn truyền tải đến bạn những thông điệp <br>
+                        tốt đẹp cùng với nguồn cảm hứng trẻ trung và tích cực.</p>
+                    <p class="black-bold">Tầm Nhìn</p>
+                    <p class="py-1">Với mục tiêu xây dựng và phát triển những giá trị bền vững, trong 10 năm tới, Phương Nhật sẽ trở thành thương hiệu dẫn đầu về thời trang phái mạnh trên thị trường Việt Nam.</p>
+                    <p class="black-bold">Thông Điệp Phương Nhật Muốn Gửi Đến Các Bạn</p>
+                    <p class="py-1">Phương Nhật muốn truyền cảm hứng tích cực đến các chàng trai: Việc mặc đẹp rất quan trọng, nó thể hiện được cá tính, sự tự tin và cả một phần lối sống, cách suy nghĩ của <br>
+                        bản thân. Mặc thanh lịch, sống thanh lịch.</p>
+                    <p class="black-bold">Chọn Phương Nhật, bạn đang lựa chọn sự hoàn hảo cho điểm nhấn thời trang của chính mình!</p>
+                </div>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div>
+                <p>Shop Phương Nhật &copy;2021, Welcome to our store</p>
+                <p>
+                    <img src="../image/Hotline.png"> Hotline: 0939589374
+                </p>
+                <p>
+                    <a href="https://www.facebook.com/dinhnhat2010"><img src="../image/Facebook.png"></a>
+                </p>
+                <p>
+                    Địa Chỉ: 80 Trương Công Định, Phường 3, Thành Phố Vũng Tàu
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+.giohang{
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 4px #ddd;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 1100px;
+}
+.giohang img{
+    width: 100%;
+}
+.giohang input{
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.itemgiohang{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+.itemgiohang .hinhanh img{
+    width: 60px;
+    height: 60px;
+}
+.itemgiohang .hinhanh, .hanhdong, input, .gia{
+    flex: 1;
+    margin-left: 20px;
+}
+.itemgiohang .tensp{
+    flex: 2;
+}
+.itemgiohang .hanhdong i:hover{
+    color: #f7452e;
+}
+.kh{
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 4px #ddd;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 1100px;
+}
+.tenkhachhang p{
+    margin-left: 20px;
+    padding-bottom: 5px;
+}
+.tenkhachhang input{
+    width: 300px;
+    border: 1px solid grey;
+}
+.sdtkh p{
+    margin-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 30px;
+}
+.sdtkh input{
+    width: 300px;
+    border: 1px solid grey;
+}
+.dc p{
+    margin-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 30px;
+}
+.dc textarea{
+    margin-left: 20px;
+}
+#tenkh{
+    padding: 10px 0px 10px 10px;
+    border-radius: 5px;
+}
+#sdt{
+    padding: 10px 0px 10px 10px;
+    border-radius: 5px;
+}
+#dc{
+    border-radius: 5px;
+    padding: 10px 0px 0px 10px;
+    font-size: 16px;
+}
+#btn-mua{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #FE2E2E;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#btn-mua:hover{
+    background-color: #B40431;
+}

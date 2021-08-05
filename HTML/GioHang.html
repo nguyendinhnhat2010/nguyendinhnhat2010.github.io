@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>Trang Chủ</title>
+        <link rel="stylesheet" href="../CSS/Style.css">
+        <link rel="stylesheet" href="../CSS/GioHang.css">
+        <script language="JavaScript" src="../JS/GioHang.js"></script>
+        <link rel="stylesheet" href="../fontawesome-free-5.15.3-web/css/all.css">
+    </head>
+    <body>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                var $filter = $('.head_nav');
+                var $filterSpacer = $('<div />', {
+                    "height": $filter.outerHeight()
+                });
+                if ($filter.size())
+                {
+                    $(window).scroll(function ()
+                    {
+                        if (!$filter.hasClass('fix') && $(window).scrollTop() > $filter.offset().top)
+                        {
+                            $filter.before($filterSpacer);
+                            $filter.addClass("fix");
+                        }
+                        else if ($filter.hasClass('fix')  && $(window).scrollTop() < $filterSpacer.offset().top)
+                        {
+                            $filter.removeClass("fix");
+                            $filterSpacer.remove();
+                        }
+                    });
+                }
+       
+            });
+          </script>
+        <header class="header fix">
+            <nav id="navbar">
+                <div id="navbar-up">
+                    <ul>
+                        <li><img src="../image/Hotline.png"> Hotline: 0939589374</li>
+                        <li><a href="https://www.facebook.com/dinhnhat2010"><img src="../image/Facebook.png" alt=""></a></li>
+                        <li class="tenshop">FaShion Phương Nhật</li>
+                        <li><a class="contact" href="../HTML/LienHe.html"><i class="far fa-id-card"></i> Liên Hệ</a></li>
+                        <li><a class="cart current" href="../HTML/GioHang.html"><i class="fas fa-cart-plus"></i> Giỏ Hàng</a></li>
+                    </ul>
+                </div>
+                <div id="navbar-menu">
+                    <ul class="menu">
+                        <li><a href="../HTML/TrangChu.html">Trang Chủ</a></li>
+                        <li><a href="">Áo</a>
+                            <ul class="submenu">
+                                <li><a href="../HTML/AoPhong.html">Áo Phông</a></li>
+                                <li><a href="../HTML/AoSoMi.html">Áo Sơ Mi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../HTML/TrangChu.html"><img src="../image/logo1.png" alt=""></a></li>
+                        <li><a href="">Quần</a>
+                            <ul class="submenu">
+                                <li><a href="../HTML/QuanShorts.html">Quần Shorts</a></li>
+                                <li><a href="../HTML/QuanJeans.html">Quần Jeans</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../HTML/GioiThieu.html">Giới Thiệu</a></li>
+                    </ul>
+                </div>
+                <div id="navbar-search">
+                    <input type="text" placeholder="Tìm kiếm trong cửa hàng">
+                    <button><img src="../image/Search.png"></button>
+                </div>
+            </nav> 
+        </header>
+        <section style="margin-top: 200px;">
+            <div>
+                <p id="tittle">
+                    FaShion Phương Nhật / Giỏ Hàng
+                </p>
+            </div>
+        </section>
+        <section id="cart">
+            <div class="giohang">
+                <div>
+                    <p style="color: tomato;margin: 0px 0px 10px 10px;">Thông Tin Sản Phẩm</p>
+                </div>
+                <div class="itemgiohang" style="padding-bottom: 10px;">
+                    <p style="margin-left: 20px;">Hình ảnh</p>
+                    <p style="margin-left: 100px;">Tên Sản Phẩm</p>
+                    <p style="margin-left: 250px;">Giá Tiền</p>
+                    <p style="margin-left: 150px;">Số Lượng</p>
+                </div>
+                <div class="itemgiohang">
+                    <div class="hinhanh">
+                        <img src="../image/tshirts1.jpg">
+                    </div>
+                    <p class="tensp">Áo PHông Tay Lở</p>
+                    <p class="gia" style="color: red;">140.000<u>đ</u></p>
+                    <input type="number" value="1">
+                    <div class="hanhdong">
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                </div>
+                <div class="itemgiohang">
+                    <div class="hinhanh">
+                        <img src="../image//jeans1.jpg">
+                    </div>
+                    <p class="tensp">Quần Jeans</p>
+                    <p class="gia" style="color: red;">350.000<u>đ</u></p>
+                    <input type="number" value="1">
+                    <div class="hanhdong">
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="kh">
+                <div>
+                    <p style="color: tomato;margin: 0px 0px 10px 10px;">
+                        Thông Tin Khách Hàng
+                    </p>
+                </div>
+                <form action="thongtinkhachhang">
+                    <div class="tenkhachhang">
+                        <p>Tên Khách Hàng</p>
+                        <input type="text" id="tenkh" placeholder="Nhập tên khách hàng">
+                    </div>
+                    <div class="sdtkh">
+                        <p>Số Điện Thoại</p>
+                        <input type="number" id="sdt" placeholder="Nhập số điện thoại khách hàng">
+                    </div> 
+                    <div class="dc">
+                        <p>Địa Chỉ</p>
+                        <textarea name="message" id="diachi" cols="50" rows="10" placeholder="Nhập địa chỉ"></textarea>
+                    </div>
+                    <div>
+                        <input type="button" onclick="muahang()" value="Mua Hàng" id="btn-mua">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div>
+                <p>Shop Phương Nhật &copy;2021, Welcome to our store</p>
+                <p>
+                    <img src="../image/Hotline.png"> Hotline: 0939589374
+                </p>
+                <p>
+                    <a href="https://www.facebook.com/dinhnhat2010"><img src="../image/Facebook.png"></a>
+                </p>
+                <p>
+                    Địa Chỉ: 80 Trương Công Định, Phường 3, Thành Phố Vũng Tàu
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

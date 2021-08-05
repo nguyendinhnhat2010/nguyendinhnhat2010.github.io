@@ -1,0 +1,375 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+.header.fix{
+    left:0;
+    max-width: 100%;
+    overflow:visible;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+#navbar-up{
+    width: 100%;
+    height: 48px;
+    overflow: auto;
+    background-color: black;
+}
+#navbar-up ul{
+    list-style: none;
+    padding-left: 10%;
+}
+#navbar-up ul li{
+    float: left;
+    color: white;
+    line-height: 48px;
+    padding: 0 10px;
+}
+#navbar-up ul li a{
+    text-decoration: none;
+    color: white;
+    line-height: 48px;
+    display: block;
+}
+#navbar-up ul li img{
+    vertical-align: middle;
+}
+#navbar-up .tenshop{
+    padding-left: 400px;
+    padding-right: 500px;
+    font-size: 18px;
+    font-family: sans-serif;
+    animation: doimauchu ease 1s infinite;
+}
+@keyframes doimauchu{
+    0%{
+        color: white;
+    }
+    25%{
+        color: gold;
+    }
+    75%{
+        color: red;
+    }
+}
+#navbar-up .contact{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #CCCC;
+    padding: 0px 5px 0px 5px;
+}
+#navbar-up .cart{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #CCCC;
+    padding: 0px 5px 0px 5px;
+}
+#navbar-up .contact:hover,
+#navbar-up .cart:hover{
+    color: red;
+    opacity: 0.8;
+}
+#navbar-up .current{
+    color: red;
+}
+#navbar-menu{
+    width: 100%;
+    height: 50px;
+    background: #F2F2F2;
+    display: flex;
+}
+ul.menu{
+    list-style: none;
+    margin: auto;
+}
+ul.menu > li{
+    float: left;
+    position: relative;
+}
+ul.menu > li > a{
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #585858;
+    font-size: 20px;
+    line-height: 50px;
+    padding: 0px 50px 0px 50px;
+    display: block;
+    font-weight: bold;
+}
+ul.menu li > a > img{
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+}
+ul.menu > li > a:hover,
+ul.submenu > li > a:hover{
+    background-color: bisque;
+    color: red;
+    transform: ease-in 0.35s;
+    -moz-transition: ease-in 0.35s;
+    -webkit-transition: ease-in 0.35s;
+}
+ul.menu .current{
+    color: red;
+}
+ul.submenu{
+    width: 200px;
+    background: #F2F2F2;
+    min-height: 80px;
+    display: none;
+    position: absolute;
+}
+ul.submenu > li{
+    list-style: none;
+}
+ul.submenu > li > a{
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #585858;
+    display: block;
+    border-top: 1px solid #ccc;
+    line-height: 50px;
+    text-indent: 10px;
+}
+ul.menu > li:hover ul.submenu{
+    display: block;
+}
+#navbar-search{
+    background-color: #F2F2F2;
+    width: 100%;
+    padding-left: 31%;
+    padding-bottom: 10px;
+}
+#navbar-search input{
+    width: 300px;
+    height: 32px;
+    padding: 5px 0px 5px 10px;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+}
+#navbar-search img{
+    vertical-align: middle;
+}
+#tittle{
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10%;
+    background: #F2F2F2;
+    font-size: 13px;
+    font-family: 'Roboto Condensed',sans-serif,Arial,sans-serif;
+    display: block;
+}
+.banner1 img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.banner2 img{
+    width: 100%;
+    display: block;
+}
+.main-footer {
+    margin-top: 150px;
+    text-align: left;
+    background: #444;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 18%;
+    height: auto;
+}
+.main-footer img{
+    vertical-align: middle;
+}
+.slidershow{
+    width: 1100px;
+    height: 400px;
+    overflow: hidden;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid red;
+    box-shadow: 5px 5px 5px #333;
+}
+.navigation{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+.bar:hover{
+    background-color: #fff;
+    transition: 0.6s;
+    border: 2px solid red;
+}
+input[name="bottom"]{
+    position: absolute;
+    visibility: hidden;
+}
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+#bottom_1:checked ~ .s1{
+    margin-left: 0;
+}
+#bottom_2:checked ~ .s1{
+    margin-left: -20%;
+}
+#bottom_3:checked ~ .s1{
+    margin-left: -40%;
+}
+.modal{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    display: none;
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__body{
+    width: 800px;
+    height: 700px;
+    background-color: white;
+    margin: 150px auto;
+    position: relative;
+    border-radius: 5px;
+}
+.sanphams{
+    width: 95%;
+    height: 300px;
+}
+.sanphams .heading{
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    color: red;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.sanphams .sanpham{
+    width: 100%;
+    display: flex;
+    
+}
+.sanphams .sanpham table{
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+.sanphams .sanpham th{
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+.sanphams .sanpham table{
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+.sanphams .sanpham table th{
+    padding: 0 8px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.sanphams .sanpham .giasanpham{
+    color: red;
+}
+.sanphams .sanpham input{
+    text-align: center;
+}
+.khachhang{
+    width: 95%;
+    height: 350px;
+}
+.khachhang .heading h3{
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.khachhang .tenkhachhang{
+    margin: 0px 0px 10px 70px;
+}
+.khachhang .tenkhachhang input{
+    padding: 5px 0px 5px 10px;
+}
+.khachhang .sdtkhachhang{
+    margin: 0px 0px 10px 70px;
+}
+.khachhang .sdtkhachhang input{
+    padding: 5px 0px 5px 10px;
+}
+.khachhang .diachikhachhang{
+    margin: 0px 0px 10px 70px;
+}
+.khachhang .diachikhachhang textarea{
+    padding: 5px 0px 5px 10px;
+}
+.khachhang .muahang{
+    margin: 0px 0px 10px 70px;
+}
+.khachhang .muahang #btn-muahang{
+    border: none;
+    padding: 10px 15px;
+    background-color: #FE2E2E;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.khachhang .muahang #btn-muahang:hover{
+    background-color: red;
+}
+.khachhang .buyandexit{
+    display: flex;
+    justify-content: space-between;
+}
+.khachhang .exit #btn-exit{
+    border: none;
+    padding: 10px 15px;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.khachhang .exit #btn-exit:hover{
+    background: #ddd;
+}
+#gias1:focus{
+    outline: white;
+}

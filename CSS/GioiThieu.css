@@ -1,0 +1,23 @@
+.content-intro{
+    width: 100%;
+}
+.black-bold{
+    font-size: 14px;
+    font-family: 'Roboto Condensed',sans-serif,Arial,sans-serif;
+    margin-left: 20%;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.py-1{
+    font-size: 14px;
+    font-family: 'Roboto Condensed',sans-serif,Arial,sans-serif;
+    padding-top: 5px;
+    margin-left: 20%;
+}
+.introduce h2{
+    display: inline-block;
+    color: grey;
+    margin-left: 20%;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
